@@ -1,0 +1,118 @@
+<svg width="980" height="320" viewBox="0 0 980 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradMain" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F5FF"/>
+      <stop offset="55%" stop-color="#007BFF"/>
+      <stop offset="100%" stop-color="#7A3CFF"/>
+    </linearGradient>
+
+    <linearGradient id="gradSoft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A8FFFF"/>
+      <stop offset="100%" stop-color="#39A0FF"/>
+    </linearGradient>
+
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.2" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .wordmark {
+      font-family: Orbitron, Exo 2, Arial, sans-serif;
+      font-size: 84px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      fill: url(#gradMain);
+    }
+
+    .submark {
+      font-family: Montserrat, Arial, sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 12px;
+      fill: #9CA3AF;
+    }
+
+    .iconText {
+      font-family: Orbitron, Exo 2, Arial, sans-serif;
+      font-size: 94px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      fill: url(#gradMain);
+    }
+  </style>
+
+  <!-- ICON -->
+  <g transform="translate(20,20)">
+    <!-- background tile -->
+    <rect x="0" y="0" width="280" height="280" rx="64" fill="#0B1220"/>
+
+    <!-- core -->
+    <g filter="url(#glow)">
+      <circle cx="140" cy="140" r="54" fill="none" stroke="url(#gradMain)" stroke-width="3.5"/>
+      <circle cx="140" cy="140" r="34" fill="none" stroke="url(#gradSoft)" stroke-width="2.2" opacity="0.95"/>
+
+      <!-- blades -->
+      <path d="M140 82 L151 108 L140 101 L129 108 Z" fill="#00F5FF"/>
+      <path d="M198 140 L172 151 L179 140 L172 129 Z" fill="#007BFF"/>
+      <path d="M140 198 L151 172 L140 179 L129 172 Z" fill="#7A3CFF"/>
+      <path d="M82 140 L108 151 L101 140 L108 129 Z" fill="#00F5FF"/>
+    </g>
+
+    <!-- NG -->
+    <text x="58" y="176" class="iconText" filter="url(#softGlow)">NG</text>
+
+    <!-- plus -->
+    <g transform="translate(212,72)" filter="url(#glow)">
+      <rect x="0" y="16" width="12" height="42" rx="3" fill="#A8FFFF"/>
+      <rect x="-15" y="31" width="42" height="12" rx="3" fill="#A8FFFF"/>
+    </g>
+
+    <!-- subtle accents -->
+    <circle cx="140" cy="86" r="3.2" fill="#C8FFFF"/>
+    <circle cx="194" cy="140" r="3.2" fill="#C8FFFF"/>
+    <circle cx="140" cy="194" r="3.2" fill="#C8FFFF"/>
+    <circle cx="86" cy="140" r="3.2" fill="#C8FFFF"/>
+  </g>
+
+  <!-- WORDMARK -->
+  <g transform="translate(360,64)">
+    <!-- small symbol -->
+    <g transform="translate(0,10)" filter="url(#glow)">
+      <circle cx="70" cy="70" r="36" fill="none" stroke="url(#gradMain)" stroke-width="3"/>
+      <circle cx="70" cy="70" r="22" fill="none" stroke="url(#gradSoft)" stroke-width="2"/>
+
+      <path d="M70 30 L78 50 L70 45 L62 50 Z" fill="#00F5FF"/>
+      <path d="M110 70 L90 78 L95 70 L90 62 Z" fill="#007BFF"/>
+      <path d="M70 110 L78 90 L70 95 L62 90 Z" fill="#7A3CFF"/>
+      <path d="M30 70 L50 78 L45 70 L50 62 Z" fill="#00F5FF"/>
+    </g>
+
+    <!-- text -->
+    <text x="130" y="88" class="wordmark" filter="url(#softGlow)">NGI</text>
+
+    <!-- plus beside word -->
+    <g transform="translate(430,18)" filter="url(#glow)">
+      <rect x="0" y="18" width="14" height="48" rx="4" fill="#A8FFFF"/>
+      <rect x="-17" y="35" width="48" height="14" rx="4" fill="#A8FFFF"/>
+    </g>
+
+    <text x="134" y="138" class="submark">LANGUAGE</text>
+
+    <!-- underline -->
+    <line x1="134" y1="160" x2="420" y2="160" stroke="url(#gradMain)" stroke-width="4" opacity="0.9"/>
+    <line x1="134" y1="172" x2="310" y2="172" stroke="url(#gradSoft)" stroke-width="2.4" opacity="0.7"/>
+  </g>
+</svg>
